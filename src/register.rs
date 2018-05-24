@@ -1,7 +1,7 @@
 pub struct Register<'a> {
     pub num: u32,
     pub register_name: &'a str,
-    pub chip: ::z80::Z80<'a>
+    pub chip: super::z80::Z80<'a>
 }
 
 impl<'a> Register<'a> {
@@ -9,7 +9,7 @@ impl<'a> Register<'a> {
         Register {
             num: num,
             register_name: name,
-            chip: ::z80::Z80::new(name)
+            chip: super::z80::Z80::new(name)
         }
     } 
 }
